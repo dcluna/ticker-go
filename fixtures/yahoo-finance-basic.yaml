@@ -1,0 +1,49 @@
+---
+version: 1
+interactions:
+- request:
+    body: ""
+    form: {}
+    headers: {}
+    url: https://query1.finance.yahoo.com/v7/finance/quote?lang=en-US&region=US&corsDomain=finance.yahoo.com&fields=symbol,marketState,regularMarketPrice,regularMarketChange,regularMarketChangePercent,preMarketPrice,preMarketChange,preMarketChangePercent,postMarketPrice,postMarketChange,postMarketChangePercent&symbols=AAPL,GOOG
+    method: GET
+  response:
+    body: '{"quoteResponse":{"result":[{"language":"en-US","region":"US","quoteType":"EQUITY","quoteSourceName":"Delayed Quote","triggerable":true,"postMarketChangePercent":-0.38930705,"postMarketTime":1601683200,"postMarketPrice":112.58,"postMarketChange":-0.4399948,"regularMarketChange":-3.7700043,"regularMarketChangePercent":-3.2280195,"regularMarketTime":1601668801,"regularMarketPrice":113.02,"regularMarketPreviousClose":116.79,"fullExchangeName":"NasdaqGS","sourceInterval":15,"exchangeDataDelayedBy":0,"tradeable":false,"marketState":"CLOSED","exchange":"NMS","exchangeTimezoneName":"America/New_York","exchangeTimezoneShortName":"EDT","gmtOffSetMilliseconds":-14400000,"market":"us_market","esgPopulated":false,"firstTradeDateMilliseconds":345479400000,"priceHint":2,"symbol":"AAPL"},{"language":"en-US","region":"US","quoteType":"EQUITY","quoteSourceName":"Delayed Quote","triggerable":true,"postMarketChangePercent":-0.30375704,"postMarketTime":1601678790,"postMarketPrice":1453.99,"postMarketChange":-4.4300537,"regularMarketChange":-31.669922,"regularMarketChangePercent":-2.1253698,"regularMarketTime":1601668801,"regularMarketPrice":1458.42,"regularMarketPreviousClose":1490.09,"fullExchangeName":"NasdaqGS","sourceInterval":15,"exchangeDataDelayedBy":0,"tradeable":false,"marketState":"CLOSED","exchange":"NMS","exchangeTimezoneName":"America/New_York","exchangeTimezoneShortName":"EDT","gmtOffSetMilliseconds":-14400000,"market":"us_market","esgPopulated":false,"firstTradeDateMilliseconds":1092922200000,"priceHint":2,"symbol":"GOOG"}],"error":null}}'
+    headers:
+      Age:
+      - "2"
+      Cache-Control:
+      - public, max-age=1, stale-while-revalidate=9
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 04 Oct 2020 00:40:13 GMT
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Server:
+      - ATS
+      Strict-Transport-Security:
+      - max-age=15552000
+      Vary:
+      - Origin,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Decorator-Operation:
+      - finance-quote-api--mtls-production-bf1.finance-k8s.svc.yahoo.local:4080/*
+      X-Envoy-Upstream-Service-Time:
+      - "2"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 3e054c4a-25ff-4839-97bd-e1f5e8279086
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Yahoo-Request-Id:
+      - fs6f4mlfni6fd
+      Y-Rid:
+      - fs6f4mlfni6fd
+    status: 200 OK
+    code: 200
+    duration: ""
